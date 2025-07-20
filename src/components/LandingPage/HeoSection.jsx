@@ -285,7 +285,7 @@ export default function HeroSection() {
               {/* Responsive Floating Cards */}
               {/* Smart Home Card */}
               <motion.div
-                className="absolute -bottom-4 sm:-bottom-6 md:-bottom-9 -left-3 sm:-left-4 md:-left-6"
+                className="absolute -bottom-4 sm:-bottom-10 md:-bottom-9 -left-3 sm:-left-4 md:-left-6"
                 initial={{ opacity: 0, y: 20, scale: 0.8 }}
                 animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ delay: 0.5, duration: 0.5, ease: "backOut" }}
@@ -293,10 +293,10 @@ export default function HeroSection() {
                 onHoverEnd={() => setHoveredCard(null)}
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="bg-white/95 backdrop-blur-xl rounded-xl p-2 sm:p-1 md:p-2 shadow-2xl max-w-[200px] sm:max-w-xs border border-white/20">
+                <div className="bg-white/95 backdrop-blur-xl rounded-xl p-1  shadow-2xl max-w-[200px] sm:max-w-xs border border-white/20">
                   <div className="flex items-center gap-2 sm:gap-3">
                     <motion.div
-                      className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/25"
+                      className="w-8 h-8 sm:w-8 sm:h-8 md:w-8 md:h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/25"
                       whileHover={{ rotate: 10 }}
                     >
                       <span className="text-white text-sm sm:text-lg md:text-xl">
@@ -304,10 +304,10 @@ export default function HeroSection() {
                       </span>
                     </motion.div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-semibold text-gray-900 text-xs sm:text-sm md:text-base mb-0.5 sm:mb-1 truncate">
+                      <h3 className="font-semibold text-gray-900 text-xs sm:text-sm md:text-base  truncate">
                         Smart Home Solutions
                       </h3>
-                      <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm leading-tight">
+                      <p className="text-gray-600 text-[5px] sm:text-xs md:text-sm leading-tight">
                         Modern automation systems
                       </p>
                     </div>
@@ -325,7 +325,7 @@ export default function HeroSection() {
 
               {/* Emergency Card */}
               <motion.div
-                className="absolute -top-4 sm:-top-6 md:-top-9 -right-3 sm:-right-4 md:-right-6"
+                className="absolute -top-4 sm:-top-12 md:-top-9 -right-3 sm:-right-4 md:-right-4"
                 initial={{ opacity: 0, y: -20, scale: 0.8 }}
                 animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ delay: 0.7, duration: 0.5, ease: "backOut" }}
@@ -333,10 +333,10 @@ export default function HeroSection() {
                 onHoverEnd={() => setHoveredCard(null)}
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="bg-white/95 backdrop-blur-xl rounded-xl p-2 sm:p-1 md:p-2 shadow-2xl max-w-[200px] sm:max-w-xs border border-white/20">
+                <div className="bg-white/95 backdrop-blur-xl rounded-xl p-1 shadow-2xl max-w-[200px] sm:max-w-xs border border-white/20">
                   <div className="flex items-center gap-2 sm:gap-3">
                     <motion.div
-                      className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center shadow-lg shadow-yellow-500/25"
+                      className="w-8 h-8 sm:w-8 sm:h-8 md:w-8 md:h-8 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center shadow-lg shadow-yellow-500/25"
                       whileHover={{ rotate: -10 }}
                     >
                       <span className="text-white text-sm sm:text-lg md:text-xl">
@@ -344,10 +344,10 @@ export default function HeroSection() {
                       </span>
                     </motion.div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-semibold text-gray-900 text-xs sm:text-sm md:text-base mb-0.5 sm:mb-1 truncate">
+                      <h3 className="font-semibold text-gray-900 text-xs sm:text-sm md:text-base  truncate">
                         Emergency Repairs
                       </h3>
-                      <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm leading-tight">
+                      <p className="text-gray-600 text-[5px] sm:text-xs md:text-sm leading-tight">
                         24/7 rapid response
                       </p>
                     </div>
@@ -365,7 +365,7 @@ export default function HeroSection() {
 
               {/* Responsive Floating Particles */}
               <motion.div
-                className="absolute top-6 sm:top-10 left-6 sm:left-10 w-1 sm:w-2 h-1 sm:h-2 bg-blue-400 rounded-full"
+                className="absolute top-6 sm:top-12 left-6 sm:left-10 w-1 sm:w-2 h-1 sm:h-2 bg-blue-400 rounded-full"
                 animate={{
                   y: [0, -10, 0],
                   opacity: [0.3, 1, 0.3],

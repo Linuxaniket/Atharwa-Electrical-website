@@ -80,7 +80,7 @@ export default function ContactForm() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Get Your{" "}
             <span className="bg-gradient-to-r from-blue-400 to-yellow-400 bg-clip-text text-transparent">
-              Free Quote
+              Free Estimate
             </span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
@@ -159,7 +159,7 @@ export default function ContactForm() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 appearance-none"
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-600/50 rounded-xl text-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 appearance-none"
                       style={{
                         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
                         backgroundPosition: "right 0.5rem center",
@@ -216,7 +216,7 @@ export default function ContactForm() {
                         Sending...
                       </>
                     ) : (
-                      <>⚡ Send Free Quote Request</>
+                      <>⚡ Send Free Estimate Request</>
                     )}
                   </span>
                 </motion.button>
@@ -259,7 +259,7 @@ export default function ContactForm() {
             {/* Contact Cards */}
             <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50">
               <h3 className="text-white font-semibold mb-6 flex items-center gap-2">
-                <span className="text-blue-400">📞</span>
+               
                 Contact Information
               </h3>
               <div className="space-y-4">

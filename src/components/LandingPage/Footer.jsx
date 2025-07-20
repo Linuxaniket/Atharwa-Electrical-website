@@ -2,6 +2,17 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Users,
+  Wrench,
+  Phone,
+  DollarSign,
+  User,
+} from "lucide-react";
 
 export default function Footer() {
   const ref = useRef(null);
@@ -50,6 +61,27 @@ export default function Footer() {
       transition: { type: "spring", stiffness: 400, damping: 10 },
     },
   };
+
+  const socialLinks = [
+    {
+      icon: <Facebook size={20} />,
+      label: "Facebook",
+      href: "#",
+      color: "from-white-600 to-white-700",
+    },
+    {
+      icon: <Twitter size={20} />,
+      label: "Twitter",
+      href: "#",
+      color: "from-white-600 to-white-700",
+    },
+    {
+      icon: <Instagram size={20} />,
+      label: "Instagram",
+      href: "#",
+      color: "from-white-600 to-white-700",
+    },
+  ];
 
   return (
     <motion.footer
@@ -104,16 +136,8 @@ export default function Footer() {
             className="sm:col-span-2 lg:col-span-2"
           >
             {/* Logo */}
-            <motion.div
-              className="flex items-center gap-3 mb-6"
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <motion.div
-                className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-600 backdrop-blur-sm rounded-xl border border-blue-400/30 shadow-lg shadow-blue-500/25"
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-              >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-600 backdrop-blur-sm rounded-xl border border-blue-400/30 shadow-lg shadow-blue-500/25">
                 <motion.svg
                   className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500"
                   fill="none"
@@ -128,11 +152,11 @@ export default function Footer() {
                     d="M13 10V3L4 14h7v7l9-11h-7z"
                   />
                 </motion.svg>
-              </motion.div>
+              </div>
               <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-yellow-400 bg-clip-text text-transparent">
                 Atharwa Electricals
               </h3>
-            </motion.div>
+            </div>
 
             {/* Description */}
             <motion.p
@@ -147,28 +171,22 @@ export default function Footer() {
             <motion.div variants={itemVariants} className="flex gap-3 sm:gap-4">
               {[
                 {
-                  icon: "📘",
+                  icon: <Facebook size={20} />,
                   label: "Facebook",
                   href: "#",
                   color: "from-white-600 to-white-700",
                 },
                 {
-                  icon: "🐦",
+                  icon: <Twitter size={20} />,
                   label: "Twitter",
                   href: "#",
                   color: "from-white-600 to-white-700",
                 },
                 {
-                  icon: "📷",
+                  icon: <Instagram size={20} />,
                   label: "Instagram",
                   href: "#",
                   color: "from-white-600 to-white-700",
-                },
-                {
-                  icon: "💼",
-                  label: "LinkedIn",
-                  href: "#",
-                  color: "from-white-700 to-white-800",
                 },
               ].map((social, index) => (
                 <motion.a
@@ -234,10 +252,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 sm:space-y-4">
               {[
-                { name: "About Us", href: "#about", icon: "👥" },
-                { name: "Our Work", href: "#work", icon: "🔧" },
-                { name: "Contact", href: "#contact", icon: "📞" },
-                { name: "Get Quote", href: "#quote", icon: "💰" },
+                { name: "About Us", href: "#about", icon: <Users size={16} /> },
+                { name: "Our Work", href: "#work", icon: <Wrench size={16} /> },
+                {
+                  name: "Contact",
+                  href: "#contact",
+                  icon: <Phone size={16} />,
+                },
+                {
+                  name: "Get Estimate",
+                  href: "$cta",
+                  icon: <DollarSign size={16} />,
+                },
               ].map((link, index) => (
                 <motion.li key={index} variants={itemVariants}>
                   <motion.a
@@ -259,60 +285,6 @@ export default function Footer() {
               ))}
             </ul>
           </motion.div>
-        </motion.div>
-
-        {/* Contact Section */}
-        <motion.div
-          variants={itemVariants}
-          className="mt-12 sm:mt-16 p-6 sm:p-8 bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/30"
-        >
-          <h4 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 text-center text-white">
-            Get In Touch
-          </h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {[
-              {
-                icon: "📍",
-                label: "Address",
-                value: "Manaji Nagar, Narhe, Pune Maharashtra",
-                // color: "from-green-500 to-green-600"
-              },
-              {
-                icon: "📞",
-                label: "Phone",
-                value: "9527165659",
-                // color: "from-blue-500 to-blue-600"
-              },
-              {
-                icon: "✉️",
-                label: "Email",
-                value: "anildahirea20@gmail.com",
-                // color: "from-purple-500 to-white-600"
-              },
-            ].map((contact, index) => (
-              <motion.div
-                key={index}
-                className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-slate-700/30 rounded-xl hover:bg-slate-700/50 transition-all duration-300"
-                whileHover={{ scale: 1.02 }}
-                variants={itemVariants}
-              >
-                <motion.div
-                  className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${contact.color} rounded-xl shadow-lg`}
-                  whileHover={{ rotate: 5 }}
-                >
-                  <span className="text-base sm:text-lg">{contact.icon}</span>
-                </motion.div>
-                <div className="min-w-0 flex-1">
-                  <p className="text-slate-300 text-xs sm:text-sm">
-                    {contact.label}
-                  </p>
-                  <p className="text-white font-medium text-sm sm:text-base truncate">
-                    {contact.value}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
 
         {/* Bottom Bar */}
