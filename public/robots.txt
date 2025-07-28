@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://atharvaelectricals.vercel.app/
+
+# Sitemaps
+Sitemap: https://atharvaelectricals.vercel.app/sitemap.xml
