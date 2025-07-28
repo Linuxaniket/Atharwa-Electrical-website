@@ -14,17 +14,14 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Atharwa Electricals",
   description: "Your one-stop solution for all electrical needs",
+  verification:{
+    google: "google3ff4cb1d1dea8d2d.html",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <head>
-        <meta
-          name="google-site-verification"
-          content="google3ff4cb1d1dea8d2d.html"
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
