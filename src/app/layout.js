@@ -15,7 +15,7 @@ export const metadata = {
   title: "Atharwa Electricals",
   description: "Your one-stop solution for all electrical needs",
   verification:{
-    google: "google3ff4cb1d1dea8d2d.html",
+    google: "A0p2l83F2d5ACH4ND7flioc7C-xuhGjzSk5rh531ocM",
   },
 };
 
