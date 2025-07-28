@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Atharwa Electricals",
   description: "Your one-stop solution for all electrical needs",
+  verification:{
+    google: "A0p2l83F2d5ACH4ND7flioc7C-xuhGjzSk5rh531ocM",
+  },
 };
 
 export default function RootLayout({ children }) {
